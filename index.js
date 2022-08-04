@@ -4,7 +4,7 @@ const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-//  Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+
 const questions = [
   {
     type: "input",
@@ -23,8 +23,34 @@ const questions = [
   },
   {
     type: "input",
-    message: "What is the title of your project?",
+    message: "Any installation instructions?",
     name: "installation",
+  },
+  {
+    type: "input",
+    message: "Any usage intructions?",
+    name: "usage",
+  },
+  {
+    type: "checkbox",
+    name: "license",
+    choices: ["MIT", "GPLv3", "GPL"],
+    message: "Pick your License.",
+  },
+  {
+    type: "input",
+    message: "Any Contributing information?",
+    name: "contributing",
+  },
+  {
+    type: "input",
+    message: "Any testing information?",
+    name: "test",
+  },
+  {
+    type: "input",
+    message: "Any Question based information?",
+    name: "question",
   },
 ];
 
