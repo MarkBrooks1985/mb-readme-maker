@@ -19,8 +19,16 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
   ## Table of Contents
+  ## Installation
+  ${installation}
   ## License
   ${renderLicenseBadge(data.license)}
+  ## Contributation
+  ${contributing}
+  ## Tests
+  ${test}
+  ## Questions
+  ${question}
 
 `;
 }
