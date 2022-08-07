@@ -1,34 +1,75 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  // return "myLicense: " + license;
-  return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+// renders the license badge
+function renderLicenseBadge(license, link) {
+  if (license === "No License") return "";
+  const badge = `![License](https://img.shields.io/badge/License-${license}-yellow.svg)`;
+  return renderLink(badge, link);
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// renders the license link
+function renderLink(content, link) {
+  return `[${content}](${link})`;
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// renders the license section
+function renderLicenseSection(license, link) {
+  return `This project uses ${renderLink(license, link)} license`;
+}
 
-// TODO: Create a function to generate markdown for README
+// get the link for the license
+function getLicenseLink(license) {
+  switch (license) {
+    case "MIT":
+      return "https://opensource.org/licenses/MIT";
+
+    case "GPLv3":
+      return "https://opensource.org/licenses/GPL-3.0";
+
+    case "GPL":
+      return "https://opensource.org/licenses/gpl-license";
+
+    default:
+      return "";
+  }
+}
+
+// renders the install section
+function renderInstall(code) {
+  return `To install this application run this following code
+\`\`\`
+${code}
+\`\`\``;
+}
+
+// generates and renders the markdown
 function generateMarkdown(data) {
+  const licenseLink = getLicenseLink(data.license);
   return `# ${data.title}
-  ## Description
-  ${data.description}
-  ## Table of Contents
-  ## Installation
-  ${installation}
-  ## License
-  ${renderLicenseBadge(data.license)}
-  ## Contributation
-  ${contributing}
-  ## Tests
-  ${test}
-  ## Questions
-  ${question}
+${renderLicenseBadge(data.license, licenseLink)}
+
+## Description
+${data.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [License](#license)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+${renderInstall(data.installation)}
+
+## License
+${renderLicenseSection(data.license, licenseLink)}
+
+## Contributation
+${data.contributing}
+
+## Tests
+${data.test}
+
+## Questions
+${data.question}
 
 `;
 }
