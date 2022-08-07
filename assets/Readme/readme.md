@@ -1,8 +1,8 @@
-# dsggdgs
-
+# read me maker
+[![License](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://opensource.org/licenses/GPL-3.0)
 
 ## Description
-sdggsd
+top quality readme maker
 
 ## Table of Contents
 - [Installation](#installation)
@@ -14,18 +14,18 @@ sdggsd
 ## Installation
 To install this application run this following code
 ```
-sgddsg
+npm i
 ```
 
 ## License
-This project uses [No License]() license
+This project uses [GPLv3](https://opensource.org/licenses/GPL-3.0) license
 
 ## Contributation
-sdgdggds
+n/a
 
 ## Tests
-sgddgsgsd
+n/a
 
 ## Questions
-sdgdssdg
+n/a
 

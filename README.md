@@ -6,5 +6,5 @@ For this challenge we had to finish a readme generator using node js. I was moti
 
 ## Images, links and recording
 
-![this is an image]()
-!this is an image()
+![this is an image](./assets/images/image1.png)
+https://drive.google.com/file/d/1X23OvGOILJfYrzbSyGIziStpDaMrOYDG/view
